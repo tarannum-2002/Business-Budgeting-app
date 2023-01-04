@@ -5,17 +5,17 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 // routes will be here....
-router.get("/register", async(req, res) => {
+// router.get("/register", async(req, res) => {
     
-    res.render("register")
-})
+//     res.render("register")
+// })
 
-router.get("/login", async(req, res) => {
+// router.get("/login", async(req, res) => {
     
-    res.render("login");
-})
+//     res.render("login");
+// })
 
-router.post('/api/login', async (req, res) => {
+router.post('/api/Login', async (req, res) => {
 	const { username, password } = req.body
 	const user = await User.findOne({ username }).lean()
 
@@ -41,7 +41,7 @@ router.post('/api/login', async (req, res) => {
 	res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
-router.post('/api/register', async (req, res) => {
+router.post('/api/Signup', async (req, res) => {
 	const { username, password: plainTextPassword } = req.body
 
 	if (!username || typeof username !== 'string') {
@@ -79,10 +79,6 @@ router.post('/api/register', async (req, res) => {
 	
 })
 
-// router.get("/completed", async(req, res) => {
-//     const allTodo = await Todo.find({done: { $eq: true}});
-//     res.render("completed", {todo: allTodo})
-// })
 
 
 module.exports = router;

@@ -4,7 +4,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./models/user')
 const UserRouter = require('./routes/LandS');
-const DetailsRouter = require('./routes/Main');
+// const DetailsRouter = require('./routes/Main');
+const cors = require('cors')
 
 
 const bcrypt = require('bcryptjs')
@@ -23,16 +24,15 @@ mongoose.connect(process.env.SERVER, {
 
 
 const app = new express()
-app.set('view engine', 'ejs');
+app.use(cors())
+
+// app.set('view engine', 'ejs');
 app.use(bodyParser.json())
 
 
-app.get('/', async (req, res) => {
-   
-    res.render('home');
-});
+
 app.use(UserRouter)
-app.use(DetailsRouter)
+// app.use(DetailsRouter)
 
 
 
@@ -95,7 +95,8 @@ app.use(DetailsRouter)
 // 	res.json({ status: 'error', error: 'Invalid username/password' })
 // })
 
-// app.post('/api/register', async (req, res) => {
+// app.post('/api/Signup', async (req, res) => {
+// 	console.log(req.body)
 // 	const { username, password: plainTextPassword } = req.body
 
 // 	if (!username || typeof username !== 'string') {
@@ -130,8 +131,13 @@ app.use(DetailsRouter)
 // 	}
 
 // 	res.json({ status: 'ok' })
+	
 // })
 
-app.listen(9999, () => {
-	console.log('Server up at 9999')
+
+
+
+
+app.listen(1337, () => {
+	console.log('Server up at 1337')
 })
