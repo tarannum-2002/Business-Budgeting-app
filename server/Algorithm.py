@@ -6,7 +6,7 @@ import sys
 
 
 def calculate(EachSpendingsTotal, share):
-    n= len(EachSpendingsTotal)
+    
     totalSpendings=0
     for money in EachSpendingsTotal.values():
         totalSpendings=totalSpendings+money
@@ -30,9 +30,37 @@ def RelativeSpendings(EachSpendingsTotal, MoneyToBeSpent):
     # print(MoneyAtTheEnd)
     return MoneyAtTheEnd
 
+def getMin(arr):
+    
+    minInd= list(arr().keys)[0]
+    for i in arr:
+        if (arr[i] < arr[minInd]):
+            minInd = i
+    return minInd
+
+
+def getMax(arr):
+    
+    maxInd = list(arr().keys)[0]
+    
+    for i in arr:
+        if (arr[i] > arr[maxInd]):
+           maxInd = i
+    return maxInd
+
+def minOf2(x, y):
+
+    return x if x < y else y
 
 def whoOwesWho(Money):
-    pass
+    
+    
+    mxCredit = getMax(Money)
+    mxDebit = getMin(Money)
+    print(mxCredit)
+    print(mxDebit)
+
+    
 
 
 
@@ -55,6 +83,8 @@ share={
     'e': 20
     }
     
+
+
 
 
 Money=calculate(EachSpendingsTotal,share)

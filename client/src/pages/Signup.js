@@ -29,7 +29,7 @@
 		const data = await response.json()
 
 		if (data.status === 'ok') {
-	         data.status='ok'
+	         alert("user created")
 		}
     }
       return(

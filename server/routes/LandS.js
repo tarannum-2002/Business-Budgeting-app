@@ -67,6 +67,7 @@ router.post('/api/Signup', async (req, res) => {
 			password
 		})
 		console.log('User created successfully: ', response)
+		
 	} catch (error) {
 		if (error.code === 11000) {
 			// duplicate key
