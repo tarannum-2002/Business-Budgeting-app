@@ -1,5 +1,8 @@
 const router = require("express").Router()
 const User = require("../models/user");
+const Business = require("../models/business");
+
+
 
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -18,6 +21,7 @@ const jwt = require('jsonwebtoken')
 router.post('/api/Login', async (req, res) => {
 	const { username, password } = req.body
 	const user = await User.findOne({ username }).lean()
+	console.log(user)
 
 	if (!user) {
 		return res.json({ status: 'error', error: 'Invalid username/password' })
@@ -42,7 +46,14 @@ router.post('/api/Login', async (req, res) => {
 })
 
 router.post('/api/Signup', async (req, res) => {
-	const { username, password: plainTextPassword } = req.body
+	const { username, businessName, password: plainTextPassword } = req.body
+	// console.log(username)
+	// console.log(businessName)
+	// console.log(plainTextPassword)
+	// const query={ businessName: businessName}
+	// const projection={ _id: 0, title: 1 }
+    // const business = await Business.findOne(query, projection)
+	// console.log(business)
 
 	if (!username || typeof username !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid username' })
@@ -57,13 +68,18 @@ router.post('/api/Signup', async (req, res) => {
 			status: 'error',
 			error: 'Password too small. Should be atleast 6 characters'
 		})
-	}
+	 }
+	// if (!business){
+	// 	return res.json({ status: 'error', error:'Invalid business name'})
+	// }
+	// console.log('ok')
 
 	const password = await bcrypt.hash(plainTextPassword, 10)
 
 	try {
 		const response = await User.create({
 			username,
+			businessName,
 			password
 		})
 		console.log('User created successfully: ', response)

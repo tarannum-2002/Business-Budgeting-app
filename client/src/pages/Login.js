@@ -13,7 +13,7 @@ function App() {
 	async function loginUser(event) {
 		event.preventDefault()
 
-		const response = await fetch('http://localhost:1337/api/Login', {
+		const response = await fetch('http://localhost:8000/api/Login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -66,15 +66,7 @@ return(
                       </Components.GhostButton>
                       </Components.LeftOverlayPanel>
 
-                      <Components.RightOverlayPanel >
-                        <Components.Title>Hello, Friend!</Components.Title>
-                        <Components.Paragraph>
-                            Enter Your personal details and start journey with us
-                        </Components.Paragraph>
-                            <Components.GhostButton >
-                                Sigin Up
-                            </Components.GhostButton> 
-                      </Components.RightOverlayPanel>
+                      
   
                   </Components.Overlay>
               </Components.OverlayContainer>

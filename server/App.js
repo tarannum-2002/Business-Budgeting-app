@@ -4,7 +4,9 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./models/user')
 const UserRouter = require('./routes/LandS');
-// const DetailsRouter = require('./routes/Main');
+const DetailsRouter = require('./routes/EnterDetRoute.js');
+const BusinessRouter = require('./routes/RegisterBusRoute.js');
+
 const cors = require('cors')
 
 
@@ -32,7 +34,9 @@ app.use(bodyParser.json())
 
 
 app.use(UserRouter)
-// app.use(DetailsRouter)
+app.use(DetailsRouter)
+app.use(BusinessRouter)
+
 
 
 
@@ -138,6 +142,6 @@ app.use(UserRouter)
 
 
 
-app.listen(1337, () => {
-	console.log('Server up at 1337')
+app.listen(8000, () => {
+	console.log('Server up at 8000')
 })
