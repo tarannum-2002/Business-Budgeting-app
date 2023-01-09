@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  background-color: #252422;
+}
+
+.bg-img {
+  background-image: url(images/stock.jpg);
+}
