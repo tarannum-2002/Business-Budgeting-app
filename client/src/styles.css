@@ -140,3 +140,9 @@ footer {
 .login-button {
   margin: 2em auto;
 }
+
+.piechart {
+  color: #fff;
+  text-align: center;
+  padding: 2em 0;
+}

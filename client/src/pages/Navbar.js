@@ -23,6 +23,11 @@ function App() {
             Register Business
           </Components.NavLink>
         </div>
+        <div style={{ margin: "10px" }}>
+          <Components.NavLink to="/Distribution">
+            Distribution
+          </Components.NavLink>
+        </div>
       </Components.NavMenu>
     </Components.Nav>
   );
