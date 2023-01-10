@@ -31,34 +31,28 @@ def RelativeSpendings(EachSpendingsTotal, MoneyToBeSpent):
     return MoneyAtTheEnd
 
 def getMin(arr):
-    
-    minInd= list(arr().keys)[0]
-    for i in arr:
-        if (arr[i] < arr[minInd]):
-            minInd = i
-    return minInd
+    return min(arr, key = arr.get)
 
 
 def getMax(arr):
-    
-    maxInd = list(arr().keys)[0]
-    
-    for i in arr:
-        if (arr[i] > arr[maxInd]):
-           maxInd = i
-    return maxInd
+    return max(arr, key = arr.get)
 
 def minOf2(x, y):
 
     return x if x < y else y
 
 def whoOwesWho(Money):
-    
-    
     mxCredit = getMax(Money)
     mxDebit = getMin(Money)
-    print(mxCredit)
-    print(mxDebit)
+    # print(mxCredit)
+    # print(mxDebit)
+    if (Money[mxCredit]==0 and Money[mxDebit]==0):
+        return 0
+    min = minOf2(-Money[mxDebit], Money[mxCredit])
+    Money[mxCredit]-=min
+    Money[mxDebit] +=min
+    print("Person " , mxDebit , " pays " , min, " to " , "Person " , mxCredit) 
+    whoOwesWho(Money)
 
     
 
@@ -76,7 +70,7 @@ EachSpendingsTotal= {
 }
 
 share={
-     'a': 20,
+    'a': 20,
     'b': 20,
     'c': 20,
     'd': 20,
@@ -87,6 +81,9 @@ share={
 
 
 
+
 Money=calculate(EachSpendingsTotal,share)
 print(Money)
 whoOwesWho(Money)
+
+

@@ -20,6 +20,9 @@ return (
 		<NavLink to="/EnterDetails">
 			EnterDetails
 		</NavLink>
+		<NavLink to="/Distribution">
+			EnterDetails
+		</NavLink>
 		</NavMenu>
 	</Nav>
 	</>

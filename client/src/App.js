@@ -7,6 +7,8 @@ import Navbar from './pages'
  import Signup from './pages/Signup'
  import EnterDetails from './pages/EnterDetails'
  import RegisterBusiness from './pages/RegisterBusiness'
+ import Data from './pages/Distribution'
+
 
 
 //  import Dashboard from './pages/Dashboard'
@@ -21,6 +23,8 @@ import Navbar from './pages'
                  <Route path="/Signup" element={<Signup/>} />
                  <Route path="/EnterDetails" element={<EnterDetails/>} />
                  <Route path="/RegisterBusiness" element={<RegisterBusiness/>} />
+                 <Route path="/Distribution" element={<Data/>} />
+
 
 
                  </Routes>
