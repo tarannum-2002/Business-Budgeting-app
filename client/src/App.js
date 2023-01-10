@@ -8,6 +8,7 @@ import RegisterBusiness from "./pages/RegisterBusiness";
 import Data from "./pages/Distribution";
 import Home from "./pages/Home.js";
 import Stock from "./images/stock.jpg";
+import Footer from "./pages/Footer";
 
 //  import Dashboard from './pages/Dashboard'
 
@@ -16,7 +17,6 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Navbar />
-        <Home />
         <Routes>
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
@@ -24,6 +24,8 @@ const App = () => {
           <Route path="/RegisterBusiness" element={<RegisterBusiness />} />
           <Route path="/Distribution" element={<Data />} />
         </Routes>
+        <Home />
+        <Footer />
         {/* <Route path="/dashboard" exact component={Dashboard} /> */}
       </BrowserRouter>
     </div>
