@@ -7,6 +7,7 @@ import EnterDetails from "./pages/EnterDetails";
 import RegisterBusiness from "./pages/RegisterBusiness";
 import Data from "./pages/Distribution";
 import Home from "./pages/Home.js";
+import Stock from "./images/stock.jpg";
 
 //  import Dashboard from './pages/Dashboard'
 

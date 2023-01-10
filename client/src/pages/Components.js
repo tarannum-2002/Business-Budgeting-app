@@ -225,22 +225,8 @@ export const Div = styled.div`
 `;
 
 export const Heading = styled.h1`
-  color: #000;
+  color: #fff;
   font-size: 5em;
   font-weight: bold;
   padding: 1em;
-`;
-
-export const ImageDiv = styled.div`
-  display: flex;
-`;
-
-export const Click = styled.button`
-  color: #fff;
-  background-color: #eb5e24;
-  height: 3.5em;
-  padding: 1em 3em;
-  border: none;
-  border-radius: 0.3em;
-  margin: 0 0 0 15%;
 `;
