@@ -5,7 +5,7 @@ import { useState } from "react";
 function App() {
   return (
     <Components.Nav>
-      <Components.Title className="icon">SIMPfi</Components.Title>
+      <p className="logo">SIMPfi</p>
       <Components.NavMenu>
         <div style={{ margin: "10px" }}>
           <Components.NavLink to="/Signup">Signup</Components.NavLink>

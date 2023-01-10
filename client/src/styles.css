@@ -120,3 +120,10 @@ footer {
   background-color: #eb5e24;
   padding: 2em;
 }
+
+.logo {
+  padding: 1.5em 3em;
+  color: #eb5e24;
+  font-size: 1.5em;
+  font-weight: bold;
+}
