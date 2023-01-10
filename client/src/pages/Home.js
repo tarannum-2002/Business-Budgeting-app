@@ -9,7 +9,7 @@ function Home() {
       <Components.DivBox>
         <Components.Div>
           <Components.Heading>
-            Business <br /> Budgeting <br /> App <br />
+            Business <br /> Budgeting <br /> With Us <br />
           </Components.Heading>
         </Components.Div>
         <img src="{Stock}" alt="stock market" />
