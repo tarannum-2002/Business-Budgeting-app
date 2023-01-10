@@ -1,6 +1,10 @@
 import React from "react";
 import * as Components from "./Components";
 import { useState } from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -14,10 +18,18 @@ function Footer() {
       <div className="footer-right">
         <h1>KNOW MORE ABOUT US</h1>
         <p className="icon">
-          <div>icon 1</div>
-          <div>icon 2</div>
-          <div>icon 3</div>
-          <div>icon 4</div>
+          <div>
+            <FaFacebook />
+          </div>
+          <div>
+            <FaInstagram />
+          </div>
+          <div>
+            <FaLinkedin />
+          </div>
+          <div>
+            <FaTwitter />
+          </div>
         </p>
         <p className="address">
           <b>WRITE TO US</b>

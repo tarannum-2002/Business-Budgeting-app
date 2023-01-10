@@ -9,6 +9,7 @@ import Data from "./pages/Distribution";
 import Home from "./pages/Home.js";
 import Stock from "./images/stock.jpg";
 import Footer from "./pages/Footer";
+import Profile from "./pages/Profile";
 
 //  import Dashboard from './pages/Dashboard'
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/EnterDetails" element={<EnterDetails />} />
           <Route path="/RegisterBusiness" element={<RegisterBusiness />} />
           <Route path="/Distribution" element={<Data />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
         <Home />
         <Footer />
