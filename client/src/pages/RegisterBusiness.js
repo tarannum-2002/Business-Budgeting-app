@@ -1,82 +1,82 @@
 import React from "react";
-import * as Components from './Components';
-import { useState } from 'react'
-
-
+import * as Components from "./Components";
+import { useState } from "react";
 
 function App() {
-    //  const [signIn, toggle] = React.useState(true);
-    // const history = useHistory()
+  //  const [signIn, toggle] = React.useState(true);
+  // const history = useHistory()
 
-	const [businessname, setName] = useState('')
-    const [password, setPassword] = useState('')
+  const [businessname, setName] = useState("");
+  const [password, setPassword] = useState("");
 
-    
+  // const history = useHistory()
+  async function RegisterBusiness(event) {
+    event.preventDefault();
 
-    // const history = useHistory()
-    async function RegisterBusiness(event){
-        event.preventDefault()
+    const response = await fetch("http://localhost:8000/api/RegisterBusiness", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        businessname,
+        password,
+      }),
+    });
 
-		const response = await fetch('http://localhost:8000/api/RegisterBusiness', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				businessname,
-                password
-                }),
-		})
+    const data = await response.json();
 
-		const data = await response.json()
-
-		if (data.status === 'ok') {
-	         alert("Business registered")
-		}
+    if (data.status === "ok") {
+      alert("Business registered");
     }
+  }
 
-    
+  // return (
+  //     <div>
+  //     <h2> Budgeting Web App</h2>
+  //     <form action="">
+  //     <div>
+  //             <label htmlFor=""></label>
+  //             <input type="Username" onChange = { this.getValue } name='Username'/>
+  //         </div>
+  //         <div>
+  //             <label htmlFor=""></label>
+  //             <input type="MoneySpent" onChange = { this.getValue } name='MoneySpent'/>
+  //         </div>
+  //         <div>
+  //             <label htmlFor=""></label>
+  //             <input type="Description" onChange = { this.getValue } name='Description'/>
+  //         </div>
+  //         <button onClick = {this.handleSubmit }>Submit</button>
+  //     </form>
+  //     </div>
+  //    );
+  //   }
+  // }
 
-// return (
-//     <div>
-//     <h2> Budgeting Web App</h2>
-//     <form action="">
-//     <div>
-//             <label htmlFor=""></label>
-//             <input type="Username" onChange = { this.getValue } name='Username'/>
-//         </div>
-//         <div>
-//             <label htmlFor=""></label>
-//             <input type="MoneySpent" onChange = { this.getValue } name='MoneySpent'/>
-//         </div>
-//         <div>
-//             <label htmlFor=""></label>
-//             <input type="Description" onChange = { this.getValue } name='Description'/>
-//         </div>
-//         <button onClick = {this.handleSubmit }>Submit</button>
-//     </form>
-//     </div>
-//    );
-//   }
-// }
-
-return(
+  return (
     <Components.Container>
-        
-            <Components.Form onSubmit={RegisterBusiness}>
-                <Components.Title>Create Account</Components.Title>
-                <Components.Input type='text' placeholder='Name' value={businessname} onChange={(e) => setName(e.target.value)}/>
-                <Components.Input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+      <Components.Form onSubmit={RegisterBusiness}>
+        <h1 className="signup-title">Register your Business here!</h1>
+        <Components.Input
+          type="text"
+          placeholder="Name"
+          value={businessname}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Components.Input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-                <Components.Button type="submit" value="RegisterBusiness" >Register Business</Components.Button>
-            </Components.Form>
-       
-
-
+        <Components.Button type="submit" value="RegisterBusiness">
+          Register Business
+        </Components.Button>
+      </Components.Form>
     </Components.Container>
-)
-
+  );
 }
 
-
- export default App ;
+export default App;

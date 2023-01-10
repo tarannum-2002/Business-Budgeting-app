@@ -46,7 +46,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const Form = styled.form`
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,17 +67,18 @@ export const Input = styled.input`
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
-  width: 100%;
+  width: 50%;
 `;
 
 export const Button = styled.button`
   border-radius: 20px;
   border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  background-color: #eb5e24;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  padding: 12px 45px;
+  padding: 1em 3em;
+  margin: 2em auto;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
@@ -98,6 +99,7 @@ export const Anchor = styled.a`
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
+  background-color: #fff;
 `;
 export const OverlayContainer = styled.div`
   position: absolute;
@@ -147,6 +149,7 @@ export const OverlayPanel = styled.div`
 export const LeftOverlayPanel = styled(OverlayPanel)`
   transform: translateX(-20%);
   ${(props) => (props.signinIn !== true ? `transform: translateX(0);` : null)}
+  background-color: #eb5e24;
 `;
 
 export const RightOverlayPanel = styled(OverlayPanel)`
@@ -161,6 +164,7 @@ export const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+  background-color: #eb5e24;
 `;
 
 export const Nav = styled.nav`
@@ -184,7 +188,7 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #4d4dff;
+    color: #eb5e24;
   }
 `;
 
