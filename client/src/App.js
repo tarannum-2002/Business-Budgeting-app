@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import EnterDetails from "./pages/EnterDetails";
 import RegisterBusiness from "./pages/RegisterBusiness";
 import Data from "./pages/Distribution";
+import Home from "./pages/Home.js";
 
 //  import Dashboard from './pages/Dashboard'
 
@@ -14,6 +15,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Navbar />
+        <Home />
         <Routes>
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />

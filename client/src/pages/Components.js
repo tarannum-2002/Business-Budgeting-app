@@ -164,7 +164,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Nav = styled.nav`
-  background: #333;
+  background: #252524;
   width: 100%;
   height: 4em;
   display: flex;
@@ -214,4 +214,33 @@ white-space: nowrap; */
   @media screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+export const DivBox = styled.div`
+  display: flex;
+`;
+
+export const Div = styled.div`
+  padding: 0;
+`;
+
+export const Heading = styled.h1`
+  color: #000;
+  font-size: 5em;
+  font-weight: bold;
+  padding: 1em;
+`;
+
+export const ImageDiv = styled.div`
+  display: flex;
+`;
+
+export const Click = styled.button`
+  color: #fff;
+  background-color: #eb5e24;
+  height: 3.5em;
+  padding: 1em 3em;
+  border: none;
+  border-radius: 0.3em;
+  margin: 0 0 0 15%;
 `;
