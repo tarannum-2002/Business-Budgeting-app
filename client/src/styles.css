@@ -154,14 +154,14 @@ footer {
 .profile-title {
   text-align: center;
   color: #fff;
-  padding: 1em 1em 2em;
+  padding: 1em 1em 1em;
 }
 
 .user-details {
   background-color: #edede9;
-  height: 65%;
+  height: 25em;
   width: 75%;
-  margin: 0 auto 2em;
+  margin: 0 auto 7em;
   border-radius: 0.3em;
   padding: 3em 4em;
 }
@@ -169,4 +169,11 @@ footer {
 .stock-img {
   height: 100vh;
   width: 100%;
+}
+
+.business-name,
+.username,
+.emailaddr {
+  background-color: #edede9;
+  margin: 2em auto;
 }
