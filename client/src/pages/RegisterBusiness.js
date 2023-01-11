@@ -8,7 +8,7 @@ function App() {
     //  const [signIn, toggle] = React.useState(true);
     // const history = useHistory()
 
-	const [businessName, setName] = useState('')
+  const [businessName, setName] = useState('')
   const [password, setPassword] = useState('')
 
     
@@ -33,6 +33,9 @@ function App() {
 		if (data.status === 'ok') {
 	         alert("Business registered")
 		}
+        else{
+            alert(data.error)
+        }
     }
 
     
@@ -64,7 +67,7 @@ return(
     <Components.Container>
         
             <Components.Form onSubmit={RegisterBusiness}>
-                <Components.Title>Create Account</Components.Title>
+                <Components.Title>Register Business </Components.Title>
                 <Components.Input type='text' placeholder='Name' value={businessName} onChange={(e) => setName(e.target.value)}/>
                 <Components.Input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
 

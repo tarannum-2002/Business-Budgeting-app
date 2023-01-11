@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const BusinessSchema = new mongoose.Schema(
 	{
-		businessName: { type: String, required: true, unique: true },
+		businessName: { type: String, required: true, unique: true, index:true, sparse:true },
 		password: { type: String, required: true }
 
 

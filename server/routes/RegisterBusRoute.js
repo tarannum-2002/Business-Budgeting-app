@@ -9,21 +9,27 @@ router.post('/api/RegisterBusiness', async (req, res) => {
 	const { businessName, password: plainTextPassword } = req.body
     console.log(businessName)
 	if (!businessName || typeof businessName !== 'string') {
+		console.log("true")
+
 		return res.json({ status: 'error', error: 'Invalid businessname' })
 	}
 
 	if (!plainTextPassword || typeof plainTextPassword !== 'string') {
+		console.log("true")
 		return res.json({ status: 'error', error: 'Invalid password' })
 	}
 
 	if (plainTextPassword.length < 5) {
+		console.log("true")
 		return res.json({
 			status: 'error',
 			error: 'Password too small. Should be atleast 6 characters'
 		})
 	}
-
+    console.log(plainTextPassword)
 	const password = await bcrypt.hash(plainTextPassword, 10)
+    console.log(password)
+
 
 	try {
 		const response = await business.create({
