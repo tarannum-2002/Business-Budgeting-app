@@ -1,6 +1,5 @@
 const router = require("express").Router()
 const User = require("../models/user");
-const Business = require("../models/business");
 
 
 
@@ -21,7 +20,7 @@ const jwt = require('jsonwebtoken')
 router.post('/api/Login', async (req, res) => {
 	const { username, password } = req.body
 	const user = await User.findOne({ username }).lean()
-	console.log(user)
+	const USER=user
 
 	if (!user) {
 		return res.json({ status: 'error', error: 'Invalid username/password' })
@@ -37,8 +36,10 @@ router.post('/api/Login', async (req, res) => {
 			},
 			JWT_SECRET=process.env.JWT_SECRET 
 		)
+		console.log(username)
+		// console.log(token)
 		
-		return res.json({ status: 'ok', data: token })
+		return res.json({ user:username, status: 'ok', data: token })
 	
 	}
     

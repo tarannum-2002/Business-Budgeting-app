@@ -21,7 +21,7 @@ return (
 			EnterDetails
 		</NavLink>
 		<NavLink to="/Distribution">
-			EnterDetails
+			Distribution
 		</NavLink>
 		</NavMenu>
 	</Nav>

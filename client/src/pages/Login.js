@@ -27,14 +27,15 @@ function App() {
 
     if (data.status === "ok") {
       localStorage.setItem("token", data.user);
-      alert("Login successful");
-      // window.location.href = '/dashboard'
+      // alert("token"+ data.user);
+      alert("Login successful "+ data.user);
+      window.location.href = '/BusinessInfo'
+
     } else {
       alert("Please check your username and password");
     }
-    // if (data.status === 'ok') {
-    // 	history.push('/login')
-    // }
+   
+
   }
 
   return (

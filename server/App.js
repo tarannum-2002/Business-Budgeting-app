@@ -2,10 +2,11 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const User = require('./models/user')
 const UserRouter = require('./routes/LandS');
 const DetailsRouter = require('./routes/EnterDetRoute.js');
 const BusinessRouter = require('./routes/RegisterBusRoute.js');
+const BInfoRouter = require('./routes/BusinessInfo.js');
+
 
 const cors = require('cors')
 
@@ -34,8 +35,9 @@ app.use(bodyParser.json())
 
 
 app.use(UserRouter)
-app.use(DetailsRouter)
+app.use(BInfoRouter)
 app.use(BusinessRouter)
+app.use(DetailsRouter)
 
 
 

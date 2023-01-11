@@ -7,8 +7,10 @@ import EnterDetails from "./pages/EnterDetails";
 import RegisterBusiness from "./pages/RegisterBusiness";
 import Data from "./pages/Distribution";
 import Home from "./pages/Home.js";
-import Stock from "./images/stock.jpg";
+// import Stock from "./images/stock.jpg";
 import Footer from "./pages/Footer";
+import BusinessInfo from "./pages/BusinessInfo";
+
 import Profile from "./pages/Profile";
 
 //  import Dashboard from './pages/Dashboard'
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/RegisterBusiness" element={<RegisterBusiness />} />
           <Route path="/Distribution" element={<Data />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/BusinessInfo" element={<BusinessInfo/>} />
+
         </Routes>
         <Home />
         <Footer />
