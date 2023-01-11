@@ -8,8 +8,8 @@ function App() {
     //  const [signIn, toggle] = React.useState(true);
     // const history = useHistory()
 
-	const [businessname, setName] = useState('')
-    const [password, setPassword] = useState('')
+	const [businessName, setName] = useState('')
+  const [password, setPassword] = useState('')
 
     
 
@@ -23,7 +23,7 @@ function App() {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				businessname,
+				businessName,
                 password
                 }),
 		})
@@ -65,7 +65,7 @@ return(
         
             <Components.Form onSubmit={RegisterBusiness}>
                 <Components.Title>Create Account</Components.Title>
-                <Components.Input type='text' placeholder='Name' value={businessname} onChange={(e) => setName(e.target.value)}/>
+                <Components.Input type='text' placeholder='Name' value={businessName} onChange={(e) => setName(e.target.value)}/>
                 <Components.Input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
 
                 <Components.Button type="submit" value="RegisterBusiness" >Register Business</Components.Button>

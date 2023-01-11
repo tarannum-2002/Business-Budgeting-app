@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 
 router.post('/api/RegisterBusiness', async (req, res) => {
 	const { businessName, password: plainTextPassword } = req.body
-
+    console.log(businessName)
 	if (!businessName || typeof businessName !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid businessname' })
 	}
