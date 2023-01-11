@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Components } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Login from "./pages/Login";
@@ -7,13 +7,11 @@ import EnterDetails from "./pages/EnterDetails";
 import RegisterBusiness from "./pages/RegisterBusiness";
 import Data from "./pages/Distribution";
 import Home from "./pages/Home.js";
-import Stock from "./images/stock.jpg";
 import Footer from "./pages/Footer";
 import Profile from "./pages/Profile";
 
 //  import Dashboard from './pages/Dashboard'
-
-const App = () => {
+function App() {
   return (
     <div>
       <BrowserRouter>
@@ -32,6 +30,6 @@ const App = () => {
       </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;

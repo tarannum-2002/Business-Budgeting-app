@@ -222,6 +222,7 @@ white-space: nowrap; */
 
 export const DivBox = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 
 export const Div = styled.div`

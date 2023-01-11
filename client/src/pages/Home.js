@@ -1,7 +1,7 @@
 import React from "react";
 import * as Components from "./Components";
 import { useState } from "react";
-import Stock from "../images/stock.jpg";
+//import Stock from "../images/stock.jpg";
 
 function Home() {
   return (
@@ -12,7 +12,11 @@ function Home() {
             Business <br /> Budgeting <br /> With Us <br />
           </Components.Heading>
         </Components.Div>
-        <img src="{Stock}" alt="stock market" />
+        <img
+          className="stock-img"
+          src={require("../images/chart.jpg")}
+          alt="stock market"
+        />
       </Components.DivBox>
 
       <div className="content">
